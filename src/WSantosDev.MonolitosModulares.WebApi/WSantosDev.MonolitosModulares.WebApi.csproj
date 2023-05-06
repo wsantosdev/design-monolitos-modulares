@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;0649</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;0649</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Accounts\WSantosDev.MonolitosModulares.Accounts.csproj" />
+    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Commons\WSantosDev.MonolitosModulares.Commons.csproj" />
+    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Exchange\WSantosDev.MonolitosModulares.Exchange.csproj" />
+    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Orders\WSantosDev.MonolitosModulares.Orders.csproj" />
+    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Portfolios\WSantosDev.MonolitosModulares.Portfolios.csproj" />
+  </ItemGroup>
+
+</Project>
