@@ -8,6 +8,9 @@ namespace WSantosDev.MonolitosModulares.Shared
 
         private AccountId(Guid value) : base(value) { }
 
+        public static AccountId New() =>
+            new(Guid.NewGuid());
+
         public static implicit operator AccountId(Guid value) =>
             new(value);
     }
