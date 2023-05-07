@@ -12,7 +12,7 @@ namespace WSantosDev.MonolitosModulares.Accounts
         public static Result<Entry> Credit(Money amount)
         {
             if(amount == Money.Zero)
-                Result<Entry>.Fail(Errors.InvalidAmount);
+                return Result<Entry>.Fail(Errors.InvalidAmount);
 
             return new Entry(amount.Value);
         }
