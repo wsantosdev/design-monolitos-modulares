@@ -41,7 +41,10 @@ namespace WSantosDev.MonolitosModulares.Portfolios
 
         internal Result Subtract(Symbol symbol, Quantity quantity)
         {
-            if(!_entries.TryGetValue(symbol, out var currentEntry) || currentEntry.Quantity - quantity < 0)
+            if(!_entries.TryGetValue(symbol, out var currentEntry))
+                return Result.Fail(Errors.InvalidSymbol);
+
+            if(currentEntry.Quantity - quantity < 0)
                 return Result.Fail(Errors.InsuficientAssets);
 
             var subtractResult = currentEntry.Subtract(quantity);
