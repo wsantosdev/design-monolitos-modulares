@@ -44,7 +44,7 @@ namespace WSantosDev.MonolitosModulares.Portfolios
             if(!_entries.TryGetValue(symbol, out var currentEntry))
                 return Result.Fail(Errors.InvalidSymbol);
 
-            if(currentEntry.Quantity - quantity < 0)
+            if(currentEntry.Quantity < quantity)
                 return Result.Fail(Errors.InsuficientAssets);
 
             var subtractResult = currentEntry.Subtract(quantity);
