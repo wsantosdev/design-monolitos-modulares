@@ -44,10 +44,12 @@ namespace WSantosDev.MonolitosModulares.Portfolios
             if(!_entries.TryGetValue(symbol, out var currentEntry) || currentEntry.Quantity - quantity < 0)
                 return Result.Fail(Errors.InsuficientAssets);
 
-            if (currentEntry.Subtract(quantity) || currentEntry.Quantity == 0)
+            var subtractResult = currentEntry.Subtract(quantity);
+
+            if (currentEntry.Quantity == 0)
                 _entries.Remove(symbol);
 
-            return Result.Success;
+            return subtractResult;
         }
     }
 }
