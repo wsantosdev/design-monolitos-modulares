@@ -2,7 +2,7 @@
 
 namespace WSantosDev.MonolitosModulares.Orders
 {
-    internal static class Errors
+    public static class Errors
     {
         public static readonly InvalidSideError InvalidSide;
         public static readonly InvalidQuantityError InvalidQuantity;
