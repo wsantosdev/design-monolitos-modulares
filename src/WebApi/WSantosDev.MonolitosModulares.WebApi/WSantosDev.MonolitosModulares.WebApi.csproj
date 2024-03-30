@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -16,15 +16,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Accounts\WSantosDev.MonolitosModulares.Accounts.csproj" />
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Commons\WSantosDev.MonolitosModulares.Commons.csproj" />
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Exchange\WSantosDev.MonolitosModulares.Exchange.csproj" />
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Orders\WSantosDev.MonolitosModulares.Orders.csproj" />
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Portfolios\WSantosDev.MonolitosModulares.Portfolios.csproj" />
+    <ProjectReference Include="..\..\Accounts\WSantosDev.MonolitosModulares.Accounts\WSantosDev.MonolitosModulares.Accounts.csproj" />
+    <ProjectReference Include="..\..\Exchange\WSantosDev.MonolitosModulares.Exchange\WSantosDev.MonolitosModulares.Exchange.csproj" />
+    <ProjectReference Include="..\..\Orders\WSantosDev.MonolitosModulares.Orders\WSantosDev.MonolitosModulares.Orders.csproj" />
+    <ProjectReference Include="..\..\Portfolios\WSantosDev.MonolitosModulares.Portfolios\WSantosDev.MonolitosModulares.Portfolios.csproj" />
   </ItemGroup>
 
 </Project>

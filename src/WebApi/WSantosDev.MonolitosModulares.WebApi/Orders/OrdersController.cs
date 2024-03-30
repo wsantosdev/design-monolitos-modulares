@@ -27,6 +27,7 @@ namespace WSantosDev.MonolitosModulares.WebApi.Orders
         [HttpPost("Send")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status409Conflict)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public IActionResult Send(SendOrderRequest request)
         {

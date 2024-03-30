@@ -1,4 +1,5 @@
 ﻿using WSantosDev.MonolitosModulares.Exchange;
+using Newtonsoft.Json;
 
 namespace WSantosDev.MonolitosModulares.WebApi.Exchange
 {
@@ -11,7 +12,8 @@ namespace WSantosDev.MonolitosModulares.WebApi.Exchange
         public decimal Price { get; }
         public string Status { get; }
 
-        private OrderViewModel(string id, string side, int quantity,
+        [JsonConstructor]
+        public OrderViewModel(string id, string side, int quantity,
                                string symbol, decimal price, string status)
         {
             Id = id;

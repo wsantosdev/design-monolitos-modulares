@@ -15,8 +15,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Commons\WSantosDev.MonolitosModulares.Commons.csproj" />
-    <ProjectReference Include="..\WSantosDev.MonolitosModulares.Shared\WSantosDev.MonolitosModulares.Shared.csproj" />
+    <ProjectReference Include="..\..\WSantosDev.MonolitosModulares.Commons\WSantosDev.MonolitosModulares.Commons.csproj" />
+    <ProjectReference Include="..\..\WSantosDev.MonolitosModulares.Shared\WSantosDev.MonolitosModulares.Shared.csproj" />
   </ItemGroup>
 
 </Project>
